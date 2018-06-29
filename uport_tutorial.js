@@ -2,12 +2,11 @@ const SimpleSigner = window.uportconnect.SimpleSigner
 const Connect = window.uportconnect.Connect
 const appName = 'UportTutorial'
 
-const connect = new Connect('Marc\'s App voor WIGO4IT', {
-  clientId: '2on6y285bcCdwFtuYipqoLTN2d95YrhW2Cc',
+const connect = new Connect('WIGO4IT IDENTITY', {
+  clientId: '2op3XWF4dpPYuyvFw5UpoQviVRs8wihzHZj',
   network: 'rinkeby',
-  signer: SimpleSigner('8277c714ab4e03d0c082004ab819c37495234cce74acd8169713c4bf1c927b07')
- });
-
+  signer: SimpleSigner('a0e388225b15ea1fbb0a86547971abc7556049b6d22dc073b7744403e7058e39')
+})
 const web3 = connect.getWeb3()
 
 // Setup the simple Status contract - allows you to set and read a status string
@@ -24,7 +23,7 @@ const uportConnect = function () {
   })
   .then((credentials) => {
   // Do something
-          cred = credentials;
+    cred = credentials;
     console.log("Credenials:", credentials);
     globalState.uportId = credentials.address;
     globalState.uportName = credentials.name;
@@ -66,9 +65,7 @@ const setStatus = () => {
 
 // attest User
 const attest = () => {
-  let PROPERTY_VALUE = "yes",
-    CLIENT_ID = '2on6y285bcCdwFtuYipqoLTN2d95YrhW2Cc';
-
+  let PROPERTY_VALUE = "yes"
   console.log(connect);
   connect.attestCredentials({
     sub: globalState.uportId,
@@ -80,7 +77,8 @@ const verify = () => {
     connect.requestCredentials({
         verified: ['isolderthaneighteen'],
     }).then((userProfile) => {
-        console.log(userProfile.ISS);
+        console.log(userProfile);
+        $('#isolderthaneighteen').innerText = userProfile.verified[0].claim.isolderthaneighteen;
         //registry.get.call(userProfile.publicKey, userProfile.verified[0].iss, userProfile.verified[0].sub).then((value) => {
         //    console.log(value);
         //})
