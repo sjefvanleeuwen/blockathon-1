@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kroeg</title>
+    <title>18+ controle</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,9 +18,9 @@
   </head>
   <body>
     <main>
-      <header><h1 id="appName">In de kroeg</h1></header>
+      <header><h1 id="appName">Leeftijd</h1></header>
       <section>
-        <h2>Connect met uPort om een biertje te bestellen</h2>
+        <h2>Connect met uPort voor 18+ controle</h2>
         <table>
           <tbody>
             <tr><td><span>uPort Id: </span><span id="uportId"></span></td></tr>
@@ -43,7 +43,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Ik ben ouder dan 18<button class="btn btn-sm btn-success" onclick="verify()">Verklaren</button> resultaat:<div id="isolderthaneighteen"></div></td>
+                    <td>Ik ben ouder dan 18<button class="btn btn-sm btn-success" onclick="verify()">Verklaren</button> resultaat:<h3><div id="isolderthaneighteen"></div></h3></td>
                 </tr>
                 </tbody>
             </table>
@@ -70,11 +70,6 @@
         $('#uportId').innerHTML = globalState.uportId;
         $('#ethAddress').innerHTML = globalState.ethAddress;
         $('#ethBalance').innerHTML = globalState.ethBalance;
-       // $('#txHashSentEth').innerHTML = globalState.txHashSentEth;
-       // $('#txHashSetStatus').innerHTML = globalState.txHashSetStatus;
-        //$('#sendTo').value = globalState.sendToAddr;
-        //$('#amount').value = globalState.sendToVal;
-        //$('#currentStatus').innerHTML = globalState.currentStatus;
       }
 
       const updateState = function () {
@@ -90,6 +85,6 @@
       ////////////////////////////////////////////////
 
     </script>
-    <script type="text/javascript" src="beer-store.js"></script>
+    <script type="text/javascript" src="over-eighteen.js"></script>
   </body>
 </html>

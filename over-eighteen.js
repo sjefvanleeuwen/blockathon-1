@@ -1,11 +1,11 @@
 const SimpleSigner = window.uportconnect.SimpleSigner
 const Connect = window.uportconnect.Connect
-const appName = 'Beer store'
+const appName = '18+'
 
-const connect = new Connect('BEER', {
-  clientId: '2osysHN7kCuVsthUM1mpa2M11JYk2eJjNgK',
+const connect = new Connect('18+', {
+  clientId: '2p1jpiF3y8etmroqd1D2akonNoDL7Kt8k5G',
   network: 'rinkeby',
-  signer: SimpleSigner('df5d5e2c9061f1e46fdb2aa5fdf88486e58318634214c7df8a2835081b2be405')
+  signer: SimpleSigner('a8566caad8918e3513b191f6e1298929a9c95b269c06e6e592c9eb53ef850c5b')
 })
 
 const web3 = connect.getWeb3()
