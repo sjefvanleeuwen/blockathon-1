@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Registratie gemeente</title>
+    <title>Stadspas</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/normalize.css">
@@ -11,42 +11,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/creative.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/municipality.css">
+    <link rel="stylesheet" href="./css/stadspas.css">
 </head>
-<body class="municipality">
+<body class="stadspas">
     <header>
         <div class="container">
-            <h2>Gemeente App</h2>
-            <h1>Uitgifte stadspassen</h1>
+            <h2>Client App</h2>
+            <h1>Gebruik stadspas</h1>
         </div>
     </header>
     <main>
         <div class="container step1 active">
             <section>
 
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a id="gotoHome" href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Registreer</li>
-                    </ol>
-                </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Aanmelden</li>
+                </ol>
+            </nav>
 
-                <div class="card">
+            <div class="card">
+                <img class="card-img-top" src="img/blockchain.jpg" alt="Card image cap"/>
+                <div class="card-body">
+                    <h2 class="card-title">Aanmelden</h2>
 
-                    <img class="card-img-top" src="img/blockchain.jpg" alt="Card image cap" />
-                    <div class="card-body">
-                        <h2 class="card-title">Aanmelden</h2>
+                    <p class="card-text">
+                        Connect met uPort om de stadspas te kunnen gebruiken.
+                    </p>
 
-                        <p class="card-text">
-                            Connect met uPort om uzelf te registeren.
-                        </p>
-
-                        <button class="btn btn-sm btn-primary btn-connect" id="connectUportBtn" onclick="uportConnect()">Connect</button>
-                        <button type="button" class="btn btn-info btn-popup-info" data-container="body" data-toggle="popover" data-placement="bottom" data-content="">
-                            i
-                        </button>
-                    </div>
+                    <button class="btn btn-sm btn-primary btn-connect" id="connectUportBtn" onclick="uportConnect()">Connect</button>
+                    <button type="button" class="btn btn-info btn-popup-info" data-container="body" data-toggle="popover" data-placement="bottom" data-content="">
+                        i
+                    </button>
                 </div>
+            </div>
             </section>
         </div>
 
@@ -56,54 +55,53 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Attesteer</li>
+                        <li class="breadcrumb-item active" aria-current="page">Verklaren</li>
                     </ol>
                 </nav>
 
                 <div class="card">
                     <img class="card-img-top" src="img/blockchain.jpg" alt="Card image cap" />
                     <div class="card-body">
-                        <h2>Behandelaar</h2>
+                        <h2 class="card-title">Ik heb een stadspas</h2>
 
                         <p class="card-text">
-                            Attesteer middels getoonde ID Card dat persoon recht heeft op een stadspas.
+                            Gebruik de onderstaande knop, zodat wij kunnen controleren dat u in het bezit van een stadspas bent.
                         </p>
-                        <button class="btn btn-sm btn-success" onclick="attest()">Uitgeven</button>
+                        <button class="btn btn-sm btn-success" onclick="verify()">Verklaren</button>
                         <button type="button" class="btn btn-info btn-popup-info" data-container="body" data-toggle="popover" data-placement="bottom" data-content="">
                             i
                         </button>
+
                     </div>
                 </div>
             </section>
         </div>
-        
+
         <div class="popover-content-container">
             <div class="popover-content">
                 <table>
                     <tbody>
-                        <tr><td><span>uPort Id: </span><span id="uportId"></span></td></tr>
-                        <tr><td><span>uPort Name: </span><span id="uportName"></span></td></tr>
-                        <tr><td><span>uPort Country: </span><span id="uportCountry"></span></td></tr>
-                        <tr><td><span>uPort Phone: </span><span id="uportPhone"></span></td></tr>
-                        <tr><td><span>ETH Address: </span><span id="ethAddress"></span></td></tr>
-                        <tr><td><span>ETH Balance: </span><span id="ethBalance"></span></td></tr>
-                        <tr><td><span>Current Status: </span><span id="currentStatus"></span></td></tr>
-                        <tr><td><span>Hash Sent: </span><span id="txHashSentEth"></span></td></tr>
-                        <tr><td><span>Hash Status: </span><span id="txHashSetStatus"></span></td></tr>
+                    <tr><td><span>uPort Id: </span><span id="uportId"></span></td></tr>
+                    <tr><td><span>uPort Name: </span><span id="uportName"></span></td></tr>
+                    <tr><td><span>uPort Country: </span><span id="uportCountry"></span></td></tr>
+                    <tr><td><span>uPort Phone: </span><span id="uportPhone"></span></td></tr>
+                    <tr><td><span>ETH Address: </span><span id="ethAddress"></span></td></tr>
+                    <tr><td><span>ETH Balance: </span><span id="ethBalance"></span></td></tr>
+                    <tr><td><span>Current Status: </span><span id="currentStatus"></span></td></tr>
+                    <tr><td><span>Hash Sent: </span><span id="txHashSentEth"></span></td></tr>
+                    <tr><td><span>Hash Status: </span><span id="txHashSetStatus"></span></td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-
     </main>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./node_modules/web3/dist/web3.js"></script>
     <script type="text/javascript" src="./node_modules/uport-connect/dist/uport-connect.js"></script>
-    <script type="text/javascript" src="./js/municipality.js"></script>
+    <script type="text/javascript" src="./js/stadspas.js"></script>
     <script type="text/javascript" src="./js/global.js"></script>
     <script type="text/javascript">
         $(document).ready(() => {
@@ -111,6 +109,5 @@
             $(".card button.btn-primary").focus();
         });
     </script>
-</body >
+</body>
 </html>
-\

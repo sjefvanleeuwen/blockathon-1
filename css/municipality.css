@@ -1,0 +1,7 @@
+.municipality header {
+    background-image: url(../img/gemeente.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 40px;
+    background-size: 120px;
+}

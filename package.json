@@ -1,12 +1,12 @@
 {
-  "name": "wigo4it-uport-integration-test",
+  "name": "wigo4it-uport-hackaton",
   "version": "1.0.0",
-  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
-  "main": "uport_tutorial.html",
+  "description": "Atest and validate user age using uPort.",
+  "main": "municipality.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "wigo4it",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "uport-connect": "latest",

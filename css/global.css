@@ -1,0 +1,166 @@
+body {
+    background: #34344f;
+    font-family: 'Nunito', sans-serif;
+    min-width: 600px;
+}
+
+main {
+    background: #34344f;
+}
+
+section {
+    padding: 0;
+}
+
+header {
+    background: #ee4b28;
+    height: 142px;
+    letter-spacing: 0.1rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', sans-serif;
+    color: darkslategray;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    line-height: 1.2rem;
+}
+
+header h2 {
+    opacity: 0.8;
+}
+
+p {
+    color: darkslategray;
+    font-size: 1.3rem;
+}
+
+table {
+    text-align: left;
+}
+
+header h1, header h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+.container nav ol.breadcrumb {
+    background-color: transparent;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 8px;
+    top: 148px;
+}
+
+main > .container {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.container .card {
+    margin: auto;
+}
+
+.card {
+    margin: 0 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-img-top {
+    max-height: 300px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 40px 20px;
+    height: 320px;
+}
+
+.card-text {
+    margin-top: 30px;
+    height: 130px;
+}
+
+.breadcrumb-item a {
+    color: #ee4b28;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.btn-sm {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 240px;
+}
+
+.btn-popup-info {
+    text-transform: none;
+    width: 40px;
+    height: 40px;
+    font-weight: 800;
+    font-family: verdanda;
+    font-size: 2rem;
+    line-height: 1.2rem;
+    float: right;
+    margin-top: 5px;
+}
+
+.btn-connect {
+    background-image: url(../img/qrcode.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 0 6px;
+    background-size: 42px;
+}
+
+.btn-success.attested {
+    background-image: url(../img/attested.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 12px 6px;
+    background-size: 42px;
+}
+
+.btn-success.verified {
+    width: 300px;
+    background-image: url(../img/verified.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 12px 6px;
+    background-size: 42px;
+}
+
+.btn-warning.not-verified {
+    color: white;
+    width: 300px;
+    background-image: url(../img/not-verified.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 12px 9px;
+    background-size: 32px;
+}
+
+.step1, .step2 {
+    display: none;
+    transition: all ease-in-out 1s;
+}
+
+    .step1.active, .step2.active {
+        display: block;
+    }
+
+.popover-content-container {
+    display: none;
+}
